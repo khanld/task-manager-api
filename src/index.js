@@ -8,8 +8,9 @@ const app = express()
 const port = process.env.PORT
 
 //Parsing request body with json content
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
+
 
 
 //Registering router
