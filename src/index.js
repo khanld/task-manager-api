@@ -2,12 +2,14 @@ const express = require('express')
 require('./db/mongoose')
 const userRouter = require('./routers/user')
 const taskRouter = require('./routers/task')
+const cors = require('cors')
 
 const app = express()
 const port = process.env.PORT
 
 //Parsing request body with json content
 app.use(express.json())
+app.use(cors())
 
 
 //Registering router
